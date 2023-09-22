@@ -1,6 +1,6 @@
 {
-  "name": "your-jsar-widget-name",
-  "displayName": "JSAR Display Name",
+  "name": "jsar-gallery-poker",
+  "displayName": "Poker",
   "version": "1.0.0",
   "description": "The template widget",
   "main": "main.xsml",
@@ -9,7 +9,7 @@
     "icon.png",
     "main.xsml",
     "lib/*.ts",
-    "model/welcome.glb"
+    "texture/poker.jpeg"
   ],
   "icon3d": {
     "base": "./model/welcome.glb"

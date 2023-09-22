@@ -1,7 +1,14 @@
 const scene = spaceDocument.scene as BABYLON.Scene;
-const animationGroups = scene.animationGroups.filter((ag) => ag.name.endsWith('#model'));
 
-if (animationGroups.length >= 1) {
-  animationGroups[0].start(true);
-}
+const texUrl = 'https://ar.rokidcdn.com/web-assets/pages/jsar/textures/poker.jpeg';
+const plane = BABYLON.MeshBuilder.CreatePlane('plane', {
+  height: 1,
+  width: 0.665,
+  sideOrientation: BABYLON.Mesh.DOUBLESIDE,
+  frontUVs: new BABYLON.Vector4(0.5, 0, 1, 1),
+  backUVs: new BABYLON.Vector4(0, 0, 0.5, 1)
+}, scene);
 
+const mat = new BABYLON.StandardMaterial('', scene);
+mat.diffuseTexture = new BABYLON.Texture(texUrl, scene);
+plane.material = mat;
