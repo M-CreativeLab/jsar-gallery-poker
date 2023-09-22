@@ -12,3 +12,10 @@ const plane = BABYLON.MeshBuilder.CreatePlane('plane', {
 const mat = new BABYLON.StandardMaterial('', scene);
 mat.diffuseTexture = new BABYLON.Texture(texUrl, scene);
 plane.material = mat;
+
+BABYLON.MeshBuilder.CreateTorusKnot('tk', {
+  tube: 0.01,
+  radialSegments: 1024,
+  p: 120,
+  q: 180
+});
